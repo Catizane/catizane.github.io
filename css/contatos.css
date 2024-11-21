@@ -1,0 +1,137 @@
+.contatos{
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "title title title"
+    "contato social link";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.contato-container{
+    grid-area: contato;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contato-title{
+    font-size: 1.5rem;
+}
+
+.contato-item{
+    display: flex;
+    gap: 24px;
+}
+
+.contato-item i{
+    font-size: 1.5rem;
+}
+
+.social-container{
+    grid-area: social;
+    display: flex;
+    gap: 32px;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+.social-item{
+    display: grid;
+    place-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--icon-color);
+}
+.link-container{
+    grid-area: link;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: right;
+}
+
+.link-title{
+    font-size: 1.5rem;
+}
+
+/* Tablet */
+
+@media (max-width:960px) {
+
+    .contatos{
+        display: grid;
+        max-width: 672px;
+        width: 100%;
+        height: 800px;
+        grid-template-areas: 
+        "title title title"
+        "contatos . link"
+        "social social social";
+        grid-template-rows: 100px 400px 100px;
+    }
+
+    .contato-container{
+        grid-area: contatos;
+    }
+
+    .social-container{
+        place-self: start center;
+    }
+
+    .social-item{
+        font-size: 3rem;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*  Celular */
+
+@media (max-width:640px) {
+
+    .contatos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 1250px;
+        gap: 24px;
+    }
+
+    .social-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        place-self: center;
+        padding: 0px;
+        gap: 30px
+    }
+
+    .social-item{
+        padding: 13px 18px;
+    }
+
+    .contato-title{
+        display: none;
+    }
+
+    .contato-container{
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .link-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .link-title{
+        font-size: 35px;
+    }
+
+}

@@ -732,5 +732,17 @@ body {
     grid-template-columns: 0.6fr 1fr;
     gap: 24px;
   }
+.project-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.project-carousel .card {
+  min-width: 320px;
+  scroll-snap-align: start;
+}
+
 
 }
